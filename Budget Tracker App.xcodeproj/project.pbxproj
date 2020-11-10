@@ -14,6 +14,7 @@
 		558A88BA255A960500D5EA5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 558A88B9255A960500D5EA5C /* Assets.xcassets */; };
 		558A88BD255A960500D5EA5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 558A88BB255A960500D5EA5C /* LaunchScreen.storyboard */; };
 		558A88C7255AB46F00D5EA5C /* ExcelFormula.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558A88C6255AB46F00D5EA5C /* ExcelFormula.swift */; };
+		558A88CA255AB6EC00D5EA5C /* Double+asCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558A88C9255AB6EC00D5EA5C /* Double+asCurrency.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		558A88BC255A960500D5EA5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		558A88BE255A960500D5EA5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		558A88C6255AB46F00D5EA5C /* ExcelFormula.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcelFormula.swift; sourceTree = "<group>"; };
+		558A88C9255AB6EC00D5EA5C /* Double+asCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+asCurrency.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				558A88BB255A960500D5EA5C /* LaunchScreen.storyboard */,
 				558A88BE255A960500D5EA5C /* Info.plist */,
 				558A88C6255AB46F00D5EA5C /* ExcelFormula.swift */,
+				558A88C9255AB6EC00D5EA5C /* Double+asCurrency.swift */,
 			);
 			path = "Budget Tracker App";
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				558A88C7255AB46F00D5EA5C /* ExcelFormula.swift in Sources */,
+				558A88CA255AB6EC00D5EA5C /* Double+asCurrency.swift in Sources */,
 				558A88B5255A960200D5EA5C /* ViewController.swift in Sources */,
 				558A88B1255A960200D5EA5C /* AppDelegate.swift in Sources */,
 				558A88B3255A960200D5EA5C /* SceneDelegate.swift in Sources */,
@@ -293,6 +297,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y4R53989M8;
 				INFOPLIST_FILE = "Budget Tracker App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,6 +317,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y4R53989M8;
 				INFOPLIST_FILE = "Budget Tracker App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
