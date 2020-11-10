@@ -13,6 +13,7 @@
 		558A88B8255A960200D5EA5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 558A88B6255A960200D5EA5C /* Main.storyboard */; };
 		558A88BA255A960500D5EA5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 558A88B9255A960500D5EA5C /* Assets.xcassets */; };
 		558A88BD255A960500D5EA5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 558A88BB255A960500D5EA5C /* LaunchScreen.storyboard */; };
+		558A88C7255AB46F00D5EA5C /* ExcelFormula.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558A88C6255AB46F00D5EA5C /* ExcelFormula.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		558A88B9255A960500D5EA5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		558A88BC255A960500D5EA5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		558A88BE255A960500D5EA5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		558A88C6255AB46F00D5EA5C /* ExcelFormula.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcelFormula.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				558A88B9255A960500D5EA5C /* Assets.xcassets */,
 				558A88BB255A960500D5EA5C /* LaunchScreen.storyboard */,
 				558A88BE255A960500D5EA5C /* Info.plist */,
+				558A88C6255AB46F00D5EA5C /* ExcelFormula.swift */,
 			);
 			path = "Budget Tracker App";
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				558A88C7255AB46F00D5EA5C /* ExcelFormula.swift in Sources */,
 				558A88B5255A960200D5EA5C /* ViewController.swift in Sources */,
 				558A88B1255A960200D5EA5C /* AppDelegate.swift in Sources */,
 				558A88B3255A960200D5EA5C /* SceneDelegate.swift in Sources */,

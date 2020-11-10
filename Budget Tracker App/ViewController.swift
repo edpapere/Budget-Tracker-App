@@ -21,6 +21,12 @@ class ViewController: UIViewController {
     // MARK: - Properties
     var balanceAmount = 4_000_000.00
     
+    // MARK: - Methods
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super .touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
     
     fileprivate func updateAmountLabel() {
         let formatter = NumberFormatter()
@@ -32,6 +38,17 @@ class ViewController: UIViewController {
         amountLabel?.text = formatter.string(from: NSNumber(value: balanceAmount))!
     }
     
+    func updateMonthlyPaymentLabel() {
+        guard let nper = Double(nperTextField?.text ?? "") else { return }
+        guard let pv = Double(pvTextField?.text ?? "") else { return }
+        guard let rate = Double(rateTextField?.text ?? "") else { return }
+        
+        let monthlyPayment = ExcelFormulas.pmt(rate: rate/100/12, nper: nper, pv: pv)
+        
+        monthlyPaymentLabel?.text = String(monthlyPayment)
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateAmountLabel()
@@ -39,6 +56,7 @@ class ViewController: UIViewController {
 
     @IBAction func loanParamChanged(_ sender: UITextField) {
         print(sender.text ?? "nil")
+        updateMonthlyPaymentLabel()
     }
     
 }
