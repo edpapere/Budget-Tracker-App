@@ -50,7 +50,7 @@
         <!--Loan-->
         <scene sceneID="JNc-dv-ZAs">
             <objects>
-                <viewController id="K88-wY-Nkm" sceneMemberID="viewController">
+                <viewController id="K88-wY-Nkm" customClass="ViewController" customModule="Budget_Tracker_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3wk-81-Hwg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -62,16 +62,25 @@
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="38.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <connections>
+                                            <action selector="loanParamChanged:" destination="K88-wY-Nkm" eventType="editingChanged" id="2Ue-Dn-sGk"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Loan term in months" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z3Q-SL-pK7">
                                         <rect key="frame" x="0.0" y="58.5" width="382" height="38.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <connections>
+                                            <action selector="loanParamChanged:" destination="K88-wY-Nkm" eventType="editingChanged" id="2cI-VB-nbt"/>
+                                        </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Annual rate" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sQd-sr-sRD">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Annual interest rate" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sQd-sr-sRD">
                                         <rect key="frame" x="0.0" y="117" width="382" height="38.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <connections>
+                                            <action selector="loanParamChanged:" destination="K88-wY-Nkm" eventType="editingChanged" id="M8N-q5-V34"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monthly payment" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxj-Q3-AVe">
                                         <rect key="frame" x="0.0" y="175.5" width="382" height="38.5"/>
@@ -97,6 +106,12 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Loan" image="creditcard.fill" catalog="system" id="lwv-aP-g7S"/>
+                    <connections>
+                        <outlet property="monthlyPaymentLabel" destination="1tS-uf-Gav" id="FA3-mn-TU4"/>
+                        <outlet property="nperTextField" destination="z3Q-SL-pK7" id="96D-eY-ZeN"/>
+                        <outlet property="pvTextField" destination="zNF-Dz-bRx" id="hVO-wN-iDC"/>
+                        <outlet property="rateTextField" destination="sQd-sr-sRD" id="Xi0-Ci-GhZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2nF-hR-4Ie" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

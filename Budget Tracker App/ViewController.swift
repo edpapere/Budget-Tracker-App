@@ -9,9 +9,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var amountLabel: UILabel!
+    // MARK: - Outlets (balance)
+    @IBOutlet weak var amountLabel: UILabel?
     
+    // MARK: - Outlets (loan calc)
+    @IBOutlet weak var monthlyPaymentLabel: UILabel?
+    @IBOutlet weak var nperTextField: UITextField? // term
+    @IBOutlet weak var pvTextField: UITextField? // amount
+    @IBOutlet weak var rateTextField: UITextField? // interest rate
+    
+    // MARK: - Properties
     var balanceAmount = 4_000_000.00
+    
     
     fileprivate func updateAmountLabel() {
         let formatter = NumberFormatter()
@@ -20,7 +29,7 @@ class ViewController: UIViewController {
 //        formatter.maximumFractionDigits = 2
 //        formatter.minimumFractionDigits = 2
         formatter.currencySymbol = "☭ "
-        amountLabel.text = formatter.string(from: NSNumber(value: balanceAmount))!
+        amountLabel?.text = formatter.string(from: NSNumber(value: balanceAmount))!
     }
     
     override func viewDidLoad() {
@@ -28,6 +37,9 @@ class ViewController: UIViewController {
         updateAmountLabel()
     }
 
-
+    @IBAction func loanParamChanged(_ sender: UITextField) {
+        print(sender.text ?? "nil")
+    }
+    
 }
 
